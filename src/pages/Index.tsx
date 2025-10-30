@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Bot, Zap, Code, Smartphone, ShoppingCart, MessageCircle, CheckCircle, Star, Users, Target, TrendingUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   const handleWhatsAppContact = () => {
     window.open("https://wa.me/8801616022669?text=Hi Shipu, I'm interested in Flow9's AI automation services. Can we discuss my project?", "_blank");
   };
@@ -381,10 +384,22 @@ const Index = () => {
               >
                 Email
               </button>
+              <button 
+                onClick={() => navigate("/privacy")}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Privacy
+              </button>
+              <button 
+                onClick={() => navigate("/terms")}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Terms
+              </button>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 Flow9. All rights reserved. Founded by Shipu - AI Automation Expert</p>
+            <p>&copy; 2025 Flow9. All rights reserved. Founded by Shipu - AI Automation Expert</p>
           </div>
         </div>
       </footer>
